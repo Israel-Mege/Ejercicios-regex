@@ -14,7 +14,7 @@ Puedes responder directamente en el chat de la entrevista si quieres. NO CONTEST
 
 ////////////////////////////////////////////////////////////////////////////////
 // WORDS
-
+// faltaban los //entre palabra y caracter?
 const importantWords = [
     `nueces\\?`,
     `tomates\\s?secos\\?`,
@@ -37,7 +37,7 @@ const importantWords = [
   
   ////////////////////////////////////////////////////////////////////////////////
   // INIT
-  //get product el ingrediente estaba en plural 
+  //get product id repetidos
   const products = getProduct({
     ingredient: "tomates secos",
     products: [
@@ -53,6 +53,7 @@ const importantWords = [
   
   ////////////////////////////////////////////////////////////////////////////////
   // SORT AND SHOW LOGS
+  // faltaba un return
   function getProduct({ ingredient, products }) {
     products.forEach(product => {
       const score = getScore({ ingredient, product });
